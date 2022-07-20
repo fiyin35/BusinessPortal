@@ -1,0 +1,20 @@
+.alert-msg {
+    border-radius: 6px;
+    color: #ffffff;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    img{
+        width: 13px;
+        margin-right: 10px;
+    }
+    &.error{
+        background: #FF001F;
+    }
+    &.success{
+        background: #039855;
+    }
+
+}

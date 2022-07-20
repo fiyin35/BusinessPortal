@@ -1,0 +1,534 @@
+// @import "../../scss/shared/colors";
+// @import "../../scss/shared/constants";
+@import "../../scss/shared/card";
+
+
+@mixin card-wrap{
+    border: 1px solid #EAECF0;
+    border-radius: $border-radius;
+    background: $pure-white
+}
+.card-wrap{
+    @include card-wrap();
+
+}
+
+.balance-card-wrap{
+    background: url("../../assets/images/balance-card2.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-basis: 33%;
+    border-radius: 11px;
+    position: relative;
+    top: 70px;
+    min-height: 231px;
+    .loading-txt {
+        text-align: center;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .each-balance-section{
+        color: $pure-white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        >.each-balance-item{
+            flex-basis: 50%;
+        }
+        &:first-of-type{
+            border-bottom: 1px solid $inapp-brand-color4;
+            padding: 18px 24px 28px;
+            .balance-item{
+                color: $brand-color2;
+                font-size: $font-size-small;
+                font-weight: $font-bold;
+            }
+        }
+        &:nth-of-type(2){
+            padding: 17px 24px 21px;
+            .balance-item{
+                font-size: 13px;
+                color: $inapp-brand-color5;
+            }
+            >.each-balance-item{
+                &:first-of-type,&:nth-of-type(2){
+                    margin-bottom: 14px;
+                }
+            }
+        }
+        .withdraw-cta{
+            display: flex;
+            align-items: flex-end;
+            width: 50%;
+            font-size: $font-size-smaller;
+            img{
+                width: 8px;
+                position: relative;
+                bottom: 4px;
+                left: 3px;
+            }
+        }
+    }
+    @media screen and(max-width: 1024px) {
+        margin-bottom: 30px;
+        top: 0;
+        margin-top: 30px;
+    }
+}
+.mybalances{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    .balance-amount{
+        color: $brand-color2;
+        font-weight: $font-medium;
+        font-size: 24px;
+    }
+    .select-balance-filter select{
+        color: $inapp-brand-color6;
+        border:1px solid $inapp-brand-color7;
+        background: transparent;
+        border-radius: calc($border-radius / 2);
+        padding: 6px 12px;
+    }
+}
+
+.chart-wrap{
+    @include card-wrap();
+    padding: 10px 20px;
+}
+.trend-wrap{
+    flex-basis: 67%;
+    padding-right: 36px;
+    @media screen and(max-width: 1024px) {
+       padding-right: unset;
+       margin-top: 32px;
+    }
+}
+.top-section{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    @media screen and(max-width: 1024px) {
+        display: block;
+    }
+}
+.in-app-page{
+    padding: 36px 50px 60px 36px;
+    @media screen and(max-width: 1024px) {
+        padding: 0 6%;
+        
+    }
+}
+
+.txtn-history{
+    width: calc(67% - 36px);
+    margin-top: 36px;
+    .card-actions a, 
+    .card-actions a:hover,
+    .card-actions a:visited {
+        color: $brand-color2;
+        font-size: $font-size-small;
+    }
+    @media screen and(max-width: 1024px) {
+        width: 100%;
+     }
+}
+.empty-txtn {
+    text-align: center;
+    padding: 80px 0;
+    img{
+        width: 10%;
+    }
+    .emtpy-msg{
+        color: $black;
+        font-weight: $font-medium;
+        font-size: 13px;
+        width: 38%;
+        margin: 20px auto;
+        // margin-top: 20px;
+
+    }
+}
+.table-top-nav{
+    margin-left: 14px;
+    a{
+        color: #475467;
+        font-size: 16px;
+        padding: 10px;
+        bottom: 10px;
+        position: relative;
+        margin-right: 10px;
+    }
+    a.active-nav,
+    a:hover{
+        color: $brand-color2;
+        border-bottom: 2px solid $brand-color2;
+    }
+}
+
+.all-menus-wrap{
+    padding: 24px 36px;
+    display: flex;
+    .each-menu{
+        @include card-wrap();
+        padding: 24px 24px 32px;
+        flex-basis: 33%;
+        .menu-title{
+            color: $input-text;
+            font-weight: $font-medium;
+            font-size: 17px;
+        }
+        .item-desc{
+            color: $light-gray;
+            font-size: $font-size-small;
+            width: 80%;
+            margin-top: 19px;
+        }
+        &:not(:last-of-type){
+            margin-right: 36px;
+        }
+        
+    }
+    .menu-btn-wrap {
+        margin-top: 70px;
+        a{
+            background: $brand-color2;
+            color: $pure-white;
+            font-size: $font-size-smaller;
+        }
+    }
+}
+
+.fund-wallet-wrap{
+    @include half-screen-form();
+    .fund-wallet-txt{
+        font-size: 16px;
+        font-weight: $font-medium;
+        color: $input-text;
+    }
+}
+.form-content-wrap{
+    @include half-screen-form();
+    margin-top: 30px;
+    margin-bottom: 30px;
+    .back-navigate{
+        font-size: 13px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        display: inline-block
+    }
+    &.full-width{
+        @include full-screen-form();
+    }
+}
+
+.roles-info{
+    .col-sm-3{
+        border-right: 1px solid #EAECF0;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .role-details-wrap {
+        margin-top: 12px;
+        padding-left: 6px;
+        padding-bottom: 50px;
+        .role-name{
+            font-size: 20px;
+            font-weight: $font-medium;
+            color: $semi-black;
+        }
+        .role-desc{
+            color: $light-gray;
+            font-size: $font-size-small;
+            margin-top: 8px;
+        }
+        .role-users{
+            margin-top: 38px;
+            .heading-title{
+                color: $light-gray;
+                font-size: 17px;
+                font-weight: $font-bold;
+                margin-bottom: 5px;
+            }
+            .each-user{
+                color: $semi-black;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 6px;
+                img{
+                    width: 13px;
+                    margin-right: 6px;
+                }
+            }
+        }
+        .role-rights{
+            border-radius: 6px;
+            border: 1px solid $dark-gray;
+            background: #FCFCFD;
+            color: $light-gray;
+            width: 44%;
+            margin: 60px 0 0;
+            .rights-title{
+                color: $inapp-brand-color2;
+                font-size: $font-size-smaller;
+                font-weight: $font-bold;
+                background: #F2F4F7;
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+                padding: 11px 16px;
+            }
+            .eachrole-right{
+                font-size: 12px;
+                padding: 16px 18px;
+            }
+            
+        }
+    }
+    .each-role-section {
+        padding-left: 35px;
+        margin-top: 18px;
+        position: relative;
+        top: -30px;
+        padding-right: 6px;
+    }
+    .role-section-titlte{
+        color: $brand-color2;
+        font-size: 13px;
+        font-weight: $font-medium;
+        margin-bottom: 10px;
+    }
+    .nav-item{
+        margin-bottom: 10px;
+    }
+    .nav-pills .nav-link{
+        color: #667085;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .nav-pills .nav-link:hover{
+        background: #F9FAFB;
+    }
+    .nav-pills .nav-link.active{
+        background: #F9FAFB;
+        color: $inapp-brand-color1;
+        
+    }
+    .add-custom,
+    .add-custom:hover{
+        background: $inapp-brand-color1;
+        font-size: 11px;
+        color: $pure-white;
+    }
+    .no-roles{
+        text-align: center;
+    }
+    .noroles-txt{
+        color: $light-gray;
+        font-size: 13px;
+        margin-bottom: 10px;
+        
+    }
+    
+}
+.two-sides-form{
+    display: flex;
+    >div{
+        flex-basis: 50%;
+        &:first-of-type{
+            // padding-right: 20px;
+        }
+        &:nth-of-type(2){
+            padding-left: 20px;
+            .small-form-heading{
+                margin-left: 20px;
+            }
+            .form-items-wrap{
+                padding-left: 20px;
+                border-left: 1px solid $inapp-lightgray;
+            }
+            
+        }
+    }
+}
+
+.business-info-wrap {
+    display: flex;
+    justify-content: space-between;
+    .business-summary{
+        flex-basis: 55%;
+    }
+    .busines-borderless{
+        flex-basis: 42%;
+        .borderless-not-enabled {
+            background: rgba(242, 255, 235, 0.4);
+            border: 1px solid $brand-color2;
+            border-radius: 16px;
+            padding: 30px 60px 40px;
+            text-align: center;
+        }
+        .borderless-msg{
+            color: $inapp-deep-green;
+            font-weight: $font-medium;
+            font-size: $font-size-small;
+            margin: 15px 0 20px;
+            line-height: 1.2;
+        }
+        .borderless-heading{
+            color: #1D1F1D;
+            font-size: $form-heading2;
+            font-weight: $font-bold;
+        }
+        .borderless-cta{
+            background: $brand-color2;
+            color: $pure-white;
+            font-size: $font-size-small;
+        }
+        .borderless-balances{
+            background: $inapp-brand-color1;
+            border-radius: 16px;
+        }
+    }
+    .each-business-summary {
+        margin: 32px 24px 0;
+        &.basic{
+            margin-top: 10px;
+        }
+        &.others{
+            margin-bottom: 32px;
+        }
+        .summary-heading{
+            font-size: $font-size-small;
+            font-weight: $font-medium;
+            color: $brand-color2;
+            margin-bottom: 10px;
+        }
+        .each-biz-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 10px;
+            font-size: $font-size-small;
+            border-bottom: 0.6px solid $inapp-gray2;
+            text-transform: capitalize;
+        }
+        
+    }
+    .borderless-balances {
+        padding: 19px 25px;
+        background:$inapp-brand-color1;
+        color: $pure-white;
+        border-radius: 16px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .fund-btn{
+            background: #2C355C;
+            border: 1px solid #2C355C;
+            color: $pure-white;
+            font-size: $font-size-small;
+            padding: 12px 20px;
+            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+            border-radius: 8px;
+        }
+        .borderless-bal-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .bal-currency img {
+            width: 65px;
+        }
+        .title-txt{
+            font-size: 17px;
+            font-weight: $font-bold;
+            .wallet-bal{
+                font-size: 24px;
+                font-weight: $font-medium;
+            }
+        }
+    }
+    .see-xhange{
+        color: $brand-color2;
+        text-align: center;
+        font-size: $font-size-small;
+        margin: 20px 0;
+    }
+    .update-gateway{
+        margin: 38px 0 20px;
+        text-align: center;
+    }
+    .update-btn,.update-btn:hover{
+        background: $inapp-brand-color2;
+        color: $pure-white;
+        font-size: $font-size-small;
+        font-weight: $font-medium;
+        padding: 12px 20px;
+        border-radius: $border-radius;
+    }
+}
+
+.mt-0{
+    margin-top: 0;
+}
+.modal-content{
+    border-radius: 19px !important;
+    .form-group{
+        margin-bottom: 20px;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+}
+.modal-footer.form-ctas{
+    margin-top: 0px;
+}
+input.form-control{
+    border-radius: $border-radius !important;
+}
+.top-actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    .back-navigate{
+        margin-bottom: 0;
+    }
+    .other-actions{
+        .btn.action-btn {
+            box-shadow: 0px 1px 2px rgb(16 24 40 / 5%);
+            border-radius: 8px;
+            background: #FFFFFF;
+            font-size: 12px;
+            padding: 10px 17px;
+            margin-left: 15px;
+            // display: flex;
+            // align-items: center;
+            &:hover{
+                background:#F4F6F6;
+                border: 1px solid #EAEDED;
+            }
+            &.delete{
+                background: #FFFBFA;
+                border: 1px solid #FDA29B;
+                color: #B42318;
+            }
+            img{
+                width: 12px;
+                height: 12px;
+                position: relative;
+                bottom: 1px;
+                margin-left: 4px;
+            }
+        }
+    }
+}

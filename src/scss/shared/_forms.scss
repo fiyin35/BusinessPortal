@@ -1,0 +1,302 @@
+@import "../../scss/shared/constants";
+@import "../../scss/shared/colors";
+
+/*Layouts*/
+.form-wrap{
+    &.login{
+        margin-top: 60px;
+    }
+    &.others{
+        margin-top: 43px;
+    }
+    &.for-cards{
+        padding: 10px 24px;
+    }
+}
+.onboarding-form-wrap{
+    &.half-center{
+        margin-bottom: 40px;
+    }
+    
+    &.for-login{
+        margin-top: 120px;
+    }
+    &.for-others{
+        margin-top: 50px;
+    }
+}
+
+.form-heading{
+    text-align: center;
+    h2{
+        color: $brand-color1;
+        font-size: $form-heading1;
+    }
+    h4{
+        color: $brand-color3;
+        font-size: $form-heading2;
+        font-weight: $font-regular;
+        margin-top: 10px;
+    }
+}
+.form-link {
+    text-align: center;
+    margin-top: 16px;
+    a,a:hover, a:focus,a:visited{
+        color: $light-gray;
+        text-decoration: none;
+        border-bottom: 1px solid $light-gray;
+        font-size: $font-size-small;
+    }
+}
+
+
+/*Inputs*/
+.form-wrap{
+    .form-group{
+        margin-bottom: 18px;
+    }
+}
+.form-group{
+    margin-bottom: 32px;
+    label, .form-label{
+        font-size: $font-size-small;
+        color: $semi-black;
+        margin-bottom: 6px;
+    }
+}
+.check-label {
+    display: flex;
+    align-items: center;
+    input{
+        width: 13px;
+        height: 13px !important;
+        margin-right: 8px;
+        border-color: #D0D5DD !important;
+    }
+}
+.react-tel-input{
+    input.form-control{
+        width: 100% !important;
+    }
+    .flag-dropdown{
+        background-color: transparent;
+        border-right: none;
+    }
+    .selected-flag:focus::before,
+    .selected-flag.open::before{
+        box-shadow: none !important;
+        border-color: transparent !important;
+    }
+}
+.form-control{
+    appearance: auto !important;
+    &.with-internal{
+        padding: 0;
+        border: none;
+        >button{
+            height: 56px;
+            svg{
+                border-radius: 50%;
+            }
+            @media screen and (max-width: 768px){
+                height: $input-small-height;
+            }
+        }
+        ul input{
+            margin-bottom: 5px;
+        }
+        &.valid-input button{
+            border-color: $success-light;
+        }
+    }
+}
+.form-input-error{
+    color: $error-dark;
+    font-size: $font-size-small;
+    margin-top: 5px;
+}
+.react-tel-input  input.form-control,
+input.form-control, select.form-control{
+    height: $input-normal-height;
+    &.inapp-input{
+        height: $input-inapp-height;
+    }
+    @media screen and (max-width: 768px){
+        height: $input-small-height;
+    }
+}
+.search-box{
+    width: 95%;
+}
+.invalid-input-wrap{
+    position: relative;
+    &:after{
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: url('../../assets/images/icons/form-error.png') no-repeat;
+        background-size: cover;
+        background-position: center;
+        // z-index: 1;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0.75rem;
+    }
+}
+input.form-control,select.form-control,
+.react-tel-input  input.form-control,
+textarea.form-control{
+    font-size: $font-size-small;
+    color: $input-text;
+    &:focus{
+        box-shadow: none !important;
+        border-color: $dark-gray;
+    }
+    &.is-invalid-input{
+        border-color: $error-deep-light;
+        background: $error-light;
+        
+    }
+    &.valid-input{
+        border-color: $success-light;
+    }
+}
+.small-form-heading{
+    color: $brand-color2;
+    font-size: $font-size-small;
+    margin: 17px 0;
+}
+.double-inputs {
+    display: flex;
+    justify-content: space-between;
+    .form-group {
+        flex-basis: 50%;
+        &:first-of-type {
+            margin-right: 10px;
+        }
+        &:nth-of-type(2) {
+            margin-left: 10px;
+        }
+    }
+}
+
+/*Buttons*/
+.btn{
+    &.form-btn{
+        border-radius: $border-radius;
+        font-size: $font-size-regular;
+        height: $input-normal-height;
+        @media screen and (max-width: 768px){
+            height: $input-small-height;
+        }
+    }
+    &.refresh-btn, &.refresh-btn:hover, 
+    &.form-action-btn, &.form-action-btn:hover{
+        border-radius: $border-radius;
+        font-size: $font-size-smaller;
+        color: $pure-white;
+        background: $brand-color2;
+        border-width: 0;
+        height: 40px;
+        @media screen and (max-width: 768px){
+            height: $input-small-height;
+        }
+    }
+    &.btn-main{
+        background: $brand-color1;
+        color: $pure-white;
+    }
+    &.btn-main:hover{
+        background: darken($brand-color1, 2%);
+        color: $pure-white;
+    }
+    &.btn-main{
+        background: $brand-color1;
+        color: $pure-white;
+    }
+    &.btn-white{
+        background: transparent;
+        color: $semi-black;
+        border: 1px solid #D0D5DD;
+
+    }
+    &.btn-frozen{
+        background: $very-light-gray;
+        color: $semi-dark-gray;
+        pointer-events: none;
+    }
+    &.full-width{
+        width: 100%;
+    }
+    &.action-gray, 
+    &.action-gray:focus,
+    &.action-gray:hover{
+        background: #F2F4F7;
+        border-color: #D0D5DD;
+        color: #667085;
+        font-size: $font-size-small;
+        border-radius: $border-radius;
+        height: $input-small-height;
+        margin-left: 12px;
+        img{
+            width: 14px;
+            margin-left: 8px;
+        }
+        span{
+            font-size: 13px;
+        }
+    }
+    &.action-gray:hover{
+        background: darken(#F2F4F7, 4%);
+    }
+    &.action-lightgray,
+    &.action-lightgray:hover{
+        background: #FCFCFD;
+        border-color: lighten(#98A2B3, 20%);
+        color: $light-gray;
+        font-size: $font-size-small;
+        border-radius: $border-radius;
+        height: $input-small-height;
+        img{
+            width: 14px;
+            margin-left: 8px;
+        }
+        span{
+            font-size: 13px;
+        }
+    }
+    &.action-lightgray:hover{
+        border-color: #98A2B3 !important;
+    }
+}
+.search-field{
+    background: url('../../assets/images/icons/search.png') no-repeat;
+    background-position: left;
+    background-size: 15px;
+    background-position-x: 8px;
+    padding-left: 30px !important;
+}
+select:focus {
+    box-shadow: none;
+    outline: none;
+}
+.form-ctas{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    .btn{
+        height: 50px;
+        padding: 16px 30px;
+        line-height: 1;
+        font-size: $font-size-small;
+    }
+    &.separated{
+        justify-content: space-between;
+    }
+}
+
+form.modal-form {
+    padding: 0 1rem;
+}

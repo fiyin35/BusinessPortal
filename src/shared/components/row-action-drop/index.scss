@@ -1,0 +1,63 @@
+@import "../../../scss/shared/colors";
+@import "../../../scss/shared/constants";
+
+
+
+.filter-wrap{
+    display: flex;
+    align-items: center;
+    flex-basis: 50%;
+    margin-bottom: 32px;
+    .each-filter-option{
+        margin-bottom: 16px;
+        .filter-label{
+            display: block;
+            font-size: 10px;
+            font-weight: $font-medium;
+        }
+        select{
+            display: block;
+            font-size: 11px;
+            font-weight: $font-medium;
+            border: 1px solid #D0D5DD;
+            border-radius: 6px;
+            height: 31px;
+            width: 100%;
+        }
+    }
+}
+.other-ctas {
+    margin-bottom: 32px;
+}
+
+.row-actions-wrap{
+    .popover{
+        left: 7% !important;
+        top: 10px !important;
+        // max-width: 158px !important;
+    }
+    &.heading-pop{
+        .popover{
+            left: 0 !important;
+            top: 0 !important;
+        }
+    }   
+    .each-action, a.each-action {
+        padding: 9px 0;
+        font-size: $font-size-smaller;
+        align-items: center;
+        text-decoration: none;
+        img{
+            width: 12px !important;
+            height: 12px !important;
+            margin-right: 5px;
+        }
+    }
+}
+button.row-action-trigger{
+    background: none !important;
+    border:none !important;
+    img{
+        width: 3px !important;
+    }
+}

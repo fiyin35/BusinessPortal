@@ -1,0 +1,152 @@
+@import "../../../scss/shared/colors";
+@import "../../../scss/shared/constants";
+@import "../../../scss/shared/icon";
+.sidebar-wrap {
+    width: $side-width;
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    bottom: 0;
+    background: $inapp-brand-color1;
+    color: $pure-white;
+    @media screen and (max-width: 1204px) {
+        z-index: 2;
+    }
+    .sidebar-logo {
+        padding: 28px 17px 23px;
+    }
+    .powered{
+        font-size: $font-size-small;
+        padding: 0 41px;
+        position: relative;
+        bottom: 12px;
+        font-weight: $font-medium;
+        margin-top: 30px;
+        span{
+            color: $brand-color2;
+        }
+    }
+    .bizname-wrap{
+        margin: 0 17px 28px;
+        background: $inapp-brand-color3;
+        border-radius: $border-radius;
+        padding: 20px 23px;
+        font-weight: $font-medium;
+        font-size: $font-size-small;
+        >div:not(:first-of-type){
+            margin-top: 13px;
+        }
+    }
+    .all-menu-items{
+        .other-menus{
+            border-top: 1px solid $inapp-brand-color3;;
+            border-bottom: 1px solid $inapp-brand-color3;
+            padding: 12px 17px;
+            margin: 12px 0;
+            .menu-title{
+                color: $dark-gray;
+                text-transform: uppercase;
+                font-size: $font-size-smaller;
+                font-weight: $font-medium;
+            }
+        }
+        .menu-item a{
+            padding: 10px 24px;
+            text-decoration: none;
+            color: $pure-white;
+            display: flex;
+            align-items: center;
+            
+            .menu-txt{
+                font-size: $font-size-small;
+                margin-left: 9px;
+            }
+            .menu-icon{
+                width: 16px;
+                height: 16px;
+                display: inline-block;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                &.db{
+                    background-image: url("data:image/svg+xml, #{$dashboard-white}");
+                }
+                &.biz{
+                    background-image: url("data:image/svg+xml, #{$biz-white}");
+                }
+                &.user{
+                    background-image: url("data:image/svg+xml, #{$users-white}");
+                }
+                &.virtual{
+                    background-image: url("data:image/svg+xml, #{$virtual-white}");
+                }
+                &.terminal{
+                    background-image: url("data:image/svg+xml, #{$terminal-white}");
+                }
+                &.identity{
+                    background-image: url("data:image/svg+xml, #{$identity-white}");
+                }
+                &.cross{
+                    background-image: url("data:image/svg+xml, #{$cross-white}");
+                }
+                &.txtn{
+                    background-image: url("data:image/svg+xml, #{$txtn-white}");
+                }
+                &.settings{
+                    background-image: url("data:image/svg+xml, #{$settings-white}");
+                }
+                
+            }
+            &:hover, &.active-nav{
+                color: $brand-color2;
+                .menu-icon{
+                    &.db{
+                        background-image: url("data:image/svg+xml, #{$dashboard-green}");
+                    }
+                    &.biz{
+                        background-image: url("data:image/svg+xml, #{$biz-green}");
+                    }
+                    &.user{
+                        background-image: url("data:image/svg+xml, #{$users-green}");
+                    }
+                    &.virtual{
+                        background-image: url("data:image/svg+xml, #{$virtual-green}");
+                    }
+                    &.terminal{
+                        background-image: url("data:image/svg+xml, #{$terminal-green}");
+                    }
+                    &.identity{
+                        background-image: url("data:image/svg+xml, #{$identity-green}");
+                    }
+                    &.cross{
+                        background-image: url("data:image/svg+xml, #{$cross-green}");
+                    }
+                    &.txtn{
+                        background-image: url("data:image/svg+xml, #{$txtn-green}");
+                    }
+                    &.settings{
+                        background-image: url("data:image/svg+xml, #{$settings-green}");
+                    }
+                    
+                }
+                // svg{
+                //     fill: $brand-color2;;
+                // }
+            }
+        }
+        .main-menu{
+            .menu-item a{
+                padding: 10px 41px;
+            }
+        }
+    }
+    
+}
+.mobile-menu-overlay {
+    background: rgba(0,0,0,0.6);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+}

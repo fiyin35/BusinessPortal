@@ -1,0 +1,45 @@
+@import "/src/scss/fonts/fonts";
+
+html,
+body{
+  overflow-x:hidden;
+}
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif !important;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+  font-weight: 400 !important;
+  
+}
+
+code {
+  font-family: 'DM Sans', sans-serif;
+}
+.btn{
+  outline: none;
+  box-shadow: none !important;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin-bottom: 0!important;
+}
+a{
+  text-decoration: none !important;
+}
+.table>:not(:first-child){
+  border-top: none !important;
+}
+img{
+  // image-rendering: pixelated !important;
+  max-width:100%;
+  // -webkit-backface-visibility: hidden;
+  //   -ms-transform: translateZ(0); /* IE 9 */
+  //   -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+  //   transform: translateZ(0);
+  // image-rendering: -moz-crisp-edges;         /* Firefox */
+  // image-rendering:   -o-crisp-edges;         /* Opera */
+  // image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+  // image-rendering: crisp-edges;
+  // -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+}

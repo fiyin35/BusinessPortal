@@ -1,0 +1,91 @@
+@use "../../scss/shared/basiclayout" as *;
+
+@import "../../scss/shared/constants";
+@import "../../scss/shared/colors";
+@import "../../scss/shared/forms";
+
+
+
+.heading-wrap{
+    display: flex;
+    padding: 25px 0;
+    align-items: center;
+    justify-content: space-between;
+    &.centered{
+        justify-content: center;
+    }
+    @media screen and (max-width: 1024px) {
+        padding: 15px 0;
+    }
+}
+.terms-msg{
+    font-size: $font-size-small;
+    color: $dark-black;
+    margin-bottom: 25px;
+    cursor: pointer;
+    span{
+        color: $brand-color2;
+        border-bottom: 1px solid;
+    }
+}
+.landing-header{
+    @include page-width;
+    @include tiny-gray-border;
+    @media screen and (max-width: 1024px) {
+        @include mobile-width;
+    }
+}
+.half-center{
+    @include half-centered-content;
+}
+.logo-wrap {
+    img{
+        width: 100%;
+    }
+}
+
+input.form-control{
+    border-radius: $border-radius !important;
+}
+
+.btn.link-btn{
+    @include primary-button;
+    padding: 24px 28px;
+    height: 63px;
+    display: flex;
+    align-items: center;
+    font-weight: $font-medium;
+    @media screen and (max-width: 1024px) {
+        padding: 20px 14px;
+        height: 47px;
+    }
+    
+}
+.btn.link-btn-gray{
+    @include gray-button;
+    padding: 24px 28px;
+    height: 63px;
+    display: flex;
+    align-items: center;
+    font-weight: $font-medium;
+    @media screen and (max-width: 1024px) {
+        padding: 20px 14px;
+        height: 47px;
+    }
+    &.signin{
+        @media screen and (max-width: 1024px) {
+            padding: 20px 25px;
+            height: 45px;
+        }
+    }
+}
+
+.header-cta{
+    font-size: $font-size-small;
+    color: $black;
+    font-weight: $font-regular;
+    .linked-cta{
+        color: $brand-color2;
+        margin-left: 5px;
+    }
+}

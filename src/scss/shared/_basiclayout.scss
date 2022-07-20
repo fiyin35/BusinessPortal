@@ -1,0 +1,54 @@
+@import "../../scss/shared/constants";
+@import "../../scss/shared/colors";
+
+@mixin page-width{
+    margin: 0 6%;
+    padding: 0 30px;
+}
+@mixin half-centered-content{
+    margin: 0 auto;
+    width: 35%;
+    @media screen and (max-width: 1024px) and (min-width: 769px){
+        width: 60%;
+    }
+    @media screen and (max-width: 768px){
+        width: 88%;
+    }
+}
+@mixin mobile-layouts-sides{
+    padding: 0 6%;
+}
+@mixin mobile-width{
+    margin: 0 6%;
+    padding: 0 10px;
+}
+ @mixin tiny-gray-border {
+    border-bottom: 1px solid rgba(215, 225, 219, 0.43);
+}
+@mixin primary-button{
+    background: $brand-color1;
+    color: $pure-white;
+    border-radius: $border-radius;
+    font-size: $font-size-regular;
+    &:hover{
+        color: $pure-white;
+    }
+    @media screen and (max-width: 1024px){
+        font-size: $font-size-small;
+    }
+    @media screen and (max-width: 320px){
+        font-size: $font-size-smaller;
+    }
+}
+@mixin gray-button{
+    background: $faded-gray;
+    color: $brand-color1;
+    border-radius: $border-radius;
+    font-size: $font-size-regular;
+    @media screen and (max-width: 1024px){
+        font-size: $font-size-small;
+    }
+    @media screen and (max-width: 320px){
+        font-size: $font-size-smaller;
+    }
+}

@@ -1,0 +1,71 @@
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import "../../../scss/shared/colors";
+
+.tablecomponent-container{
+    // font-family: "Noto Sans JP", sans-serif;
+    font-size: 12px;
+    .container{
+        overflow: auto;
+    }
+}
+
+
+
+.loading-data {
+    text-align: center;
+    font-size: 20px;
+}
+
+
+span.each-pagenum {
+    background-color: white;
+    padding: 5px 10px;
+    font-size: 11px;
+    margin: 0 3px;
+    border: 1px solid #DFE3E8;
+    border-radius: 4px;
+    &.active{
+        border: 1px solid #78B943;
+        color: #78B943;
+    }
+    &:hover{
+        cursor: pointer;
+        background: #A9CCE3;
+    }
+}
+
+.middot {
+    background-color: white;
+    padding: 3px 8px;
+    margin: 1px 3px 0;
+    border: 1px solid #DFE3E8;
+}
+
+table.table {
+    border-radius: 8px;
+
+    thead th {
+        border: none;
+        border-bottom: 1px solid #EAECF0;
+        color: $inapp-brand-color8;
+        font-size: 13px;
+        font-weight: 400;
+        text-transform: uppercase;
+        background: #F9FAFB;
+        padding-left: 24px;
+        vertical-align: middle;
+        min-width: 150px;
+    }
+    td{
+        padding: 22px 0 22px 24px;
+    }
+}
+
+table.table-bordered td, table.table-bordered th {
+    border: 1px solid #f1f2f3;
+}
+
+table.table-striped tbody tr:nth-of-type(odd), table.table-striped tbody tr:nth-of-type(odd) td{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), #C2C9D1 !important;
+
+}

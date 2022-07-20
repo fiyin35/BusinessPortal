@@ -1,0 +1,48 @@
+@import "../../../scss/shared/colors";
+@import "../../../scss/shared/constants";
+
+.filter-searchbar{
+    flex-basis: 60%;
+    input{
+        height: $input-small-height;
+        font-size: $font-size-smaller;
+        border-radius: $border-radius;
+    }
+}
+.table-actions-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.filter-wrap{
+    display: flex;
+    align-items: center;
+    flex-basis: 50%;
+    margin-bottom: 32px;
+    .each-filter-option{
+        margin-bottom: 16px;
+        .filter-label{
+            display: block;
+            font-size: 10px;
+            font-weight: $font-medium;
+        }
+        select{
+            display: block;
+            font-size: 11px;
+            font-weight: $font-medium;
+            border: 1px solid #D0D5DD;
+            border-radius: 6px;
+            height: 31px;
+            width: 100%;
+        }
+    }
+    .react-datepicker-wrapper input{
+        border: 1px solid #D0D5DD;
+        border-radius: 6px;
+        height: 31px;
+        width: 100%;
+    }
+}
+.other-ctas {
+    margin-bottom: 32px;
+}

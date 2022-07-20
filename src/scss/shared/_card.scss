@@ -1,0 +1,102 @@
+@import "../../scss/shared/colors";
+@import "../../scss/shared/constants";
+
+@mixin card-wrap{
+    border: 1px solid #EAECF0;
+    border-radius: $border-radius;
+    background: $pure-white
+}
+
+@mixin half-screen-form {
+    width: 45%;
+    margin-left: 36px;
+}
+@mixin full-screen-form {
+    width: 100%;
+    padding: 0 36px;
+    margin-left: 0;
+}
+
+.card-wrap{
+    @include card-wrap();
+   .card-heading{
+       padding: 16px 24px;
+       font-size: 16px;
+        .heading-txt{
+            font-weight: $font-bold;
+        }
+        .sub-heading-txt{
+            font-weight: $font-regular;
+            font-size: 12px;
+            background: #F9FAFB;
+            border-radius: calc($border-radius*2);
+            display: inline-block;
+            padding: 3px 7px;
+            &.active{
+                color: $inapp-brand-color1;
+                font-weight: $font-medium;
+                background:$inapp-brand-color9;
+            }
+        }
+        .bolden-title{
+            font-size: 16px;
+            font-weight: $font-medium;
+            color: $input-text;
+        }
+       &.with-border{
+        border-bottom: 1px solid #EAECF0;
+       }
+       &.horizontal{
+            display: flex;
+            &.centered{
+                align-items: center;
+            }
+            &.spread{
+                justify-content: space-between;
+            }
+       }
+       .card-title-txt{
+           font-weight: $font-medium;
+           font-size: $font-size-big;
+       }
+       
+   } 
+   .card-table-heading{
+       background: $off-white;
+       .each-heading{
+           color: $inapp-brand-color8;
+           font-size: 16px;
+       }
+       &.custom{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 24px;
+        }
+   }
+   
+} 
+.row-actions-wrap .all-row-actions{
+    &.table-actions{
+        margin: -16px -22px;
+        .each-action, a.each-action{
+            padding: 9px 22px !important;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            color: inherit !important;
+            &:hover{
+                background: #F8F9F9;
+                
+            }
+            &:first-of-type{
+                border-top-left-radius: 6px !important;
+                border-top-right-radius: 6px !important;
+            }
+            &:last-of-type{
+                border-bottom-left-radius: 6px !important;
+                border-bottom-right-radius: 6px !important;
+            }
+        }
+    }
+}  
